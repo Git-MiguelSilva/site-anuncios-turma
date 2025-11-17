@@ -1,0 +1,45 @@
+services:
+  db:
+    image: mariadb:11
+    container_name: anuncios_db
+    restart: always
+    env_file: .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      TZ: ${TZ}
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - anuncios-net
+
+  wordpress:
+    image: wordpress:php8.2-apache
+    container_name: anuncios_wp
+    restart: always
+    depends_on:
+      - db
+    env_file: .env
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: ${DB_USER}
+      WORDPRESS_DB_PASSWORD: ${DB_PASSWORD}
+      WORDPRESS_DB_NAME: ${DB_NAME}
+      WORDPRESS_TABLE_PREFIX: ${WP_TABLE_PREFIX}
+      TZ: ${TZ}
+    ports:
+      - "${WP_PORT}:80"
+    volumes:
+      - wp-data:/var/www/html
+    networks:
+      - anuncios-net
+
+volumes:
+  db-data:
+  wp-data:
+
+networks:
+  anuncios-net:
+    driver: bridge
