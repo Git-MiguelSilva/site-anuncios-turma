@@ -1,0 +1,10 @@
+# Volumes de dados (não versionar)
+db-data/
+wp-data/
+
+# Ficheiro com passwords reais
+.env
+
+# Coisas típicas
+.DS_Store
+*.log
