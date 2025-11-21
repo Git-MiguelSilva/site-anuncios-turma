@@ -1,10 +1,12 @@
-# Volumes de dados (não versionar)
+# Pasta onde fica guardada a base de dados (não deve ser incluída no repositório)
 db-data/
+
+# Pasta onde ficam guardados os ficheiros do WordPress (também não deve ir para o repositório)
 wp-data/
 
-# Ficheiro com passwords reais
+# Ficheiro que contém passwords e outras credenciais reais (manter fora do repositório)
 .env
 
-# Coisas típicas
+# Ficheiros e lixo comuns que não interessam para versionamento
 .DS_Store
 *.log

@@ -43,3 +43,22 @@ docker compose down #Se quiser ficar com os volumes do site
 
 docker compose down -v #Se quiser que o site volte ao 0, pedindo a instalação outra vez
 
+# Importar o site já configurado (anúncios + tema)
+
+Depois de concluir a instalação do WordPress:
+
+Entrar no painel de administração:
+http://localhost:8080/wp-admin
+
+No menu do WordPress, ir a:
+Ferramentas → Importar → WordPress
+
+Se necessário, instalar o importador de WordPress.
+
+Importar o ficheiro:
+
+export/anunciosturma.xml
+
+
+Atribuir o conteúdo a um utilizador e confirmar a importação dos ficheiros.
+
