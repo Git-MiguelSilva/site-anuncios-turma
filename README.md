@@ -1,38 +1,45 @@
-###### \# Site de Anúncios da Turma (WordPress + Docker)
+# Projeto 1 – IEI
 
-###### 
+# Instalação do WordPress com Docker Compose (WordPress + MariaDB)
 
-###### Projeto de IPW: instalação de WordPress com Docker Compose (WordPress + MariaDB) para servir como feed de anúncios da turma.
+# Este projeto configura um ambiente WordPress ao usar Docker Compose, para criar um site de anúncios da turma de forma simples e reprodutível.
 
-###### 
 
-###### \## Requisitos
 
-###### 
+# Requisitos:
 
-###### \- WSL2 (Ubuntu)
+# - WSL2 (Ubuntu)
 
-###### \- Docker Desktop com integração WSL
+# - Docker Desktop com integração WSL
 
-###### \- Git
+# - Git
 
-###### 
+# Como levantar o projeto:
 
-###### \## Como correr o projeto
+# Passo 1:
 
-###### 
+git clone https://github.com/Git-MiguelSilva/site-anuncios-turma
+cd site-anuncios-turma
 
-###### ```bash
+# Passo 2:
 
-###### git clone https://github.com/TEU-USER/TEU-REPO.git
+cp .env.example .env
 
-###### cd TEU-REPO
+# Passo 2.1(opcional):
 
-###### cp .env.example .env
+nano .env #para modificar as credenciais se for desejado
 
-###### \# editar .env com as credenciais pretendidas
+# Passo 3:
 
-###### docker compose up -d
+docker compose up -d
 
-# 
+# Agora se for ao site http://localhost:8080/ deve aparecer lá para fazer a instalação do WordPress!
+
+# Quando quiser desligar o site tem duas escolhas:
+
+# No WSL:
+
+docker compose down #Se quiser ficar com os volumes do site
+
+docker compose down -v #Se quiser que o site volte ao 0, pedindo a instalação outra vez
 
