@@ -2,7 +2,7 @@
 
 # Instalação do WordPress com Docker Compose (WordPress + MariaDB)
 
-Este projeto configura um ambiente WordPress ao usar Docker Compose, para criar um site de anúncios da turma de forma simples e reprodutível.
+Este projeto configura um ambiente WordPress ao usar Docker Compose para criar um site de anúncios da turma de forma simples e reprodutível.
 
 
 
