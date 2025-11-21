@@ -2,17 +2,17 @@
 
 # Instalação do WordPress com Docker Compose (WordPress + MariaDB)
 
-# Este projeto configura um ambiente WordPress ao usar Docker Compose, para criar um site de anúncios da turma de forma simples e reprodutível.
+Este projeto configura um ambiente WordPress ao usar Docker Compose, para criar um site de anúncios da turma de forma simples e reprodutível.
 
 
 
 # Requisitos:
 
-# - WSL2 (Ubuntu)
+- WSL2 (Ubuntu)
 
-# - Docker Desktop com integração WSL
+- Docker Desktop com integração WSL
 
-# - Git
+- Git
 
 # Como levantar o projeto:
 
@@ -33,11 +33,11 @@ nano .env #para modificar as credenciais se for desejado
 
 docker compose up -d
 
-# Agora se for ao site http://localhost:8080/ deve aparecer lá para fazer a instalação do WordPress!
+Agora se for ao site http://localhost:8080/ deve aparecer lá para fazer a instalação do WordPress!
 
 # Quando quiser desligar o site tem duas escolhas:
 
-# No WSL:
+No WSL:
 
 docker compose down #Se quiser ficar com os volumes do site
 
